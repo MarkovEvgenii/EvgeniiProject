@@ -1,0 +1,575 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@font-face {
+	font-family: 'Post No Bills Jaffna';
+	src: url('../fonts/PostNoBillsJaffna-Bold.eot');
+	src: local('☺'), url('../fonts/PostNoBillsJaffna-Bold.woff') format('woff'), url('../fonts/PostNoBillsJaffna-Bold.ttf') format('truetype'), url('../fonts/PostNoBillsJaffna-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@400;600&display=swap');
+body{
+
+}
+
+.wrapper {  
+    overflow: hidden;
+    min-height: 100%;
+    width: 1920px;
+    display: flex;
+    flex-direction: column;}
+.container {
+    max-width: 1920px;
+    margin: 0px auto;}
+.content {
+    flex: 1 1 auto;}
+//------------------------БЛОК hader-----------------------------------
+    .header {
+        background-color: #000000;
+        color: #969696;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 14px 0px;
+    }
+    .header__row {
+        display: flex;
+        flex-direction: row;  
+    }
+    .header__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 405px; // ----- ломается при уменьшении экрана
+    }
+    .header__phone-image {
+        margin: 0px 16px 0px 0px;
+        width: 13.3px;
+        height: 13.3px;
+    }
+    .header__login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 593px; // ----- ломается при уменьшении экрана
+    }                       
+    .header__door-img {
+        margin: 0px 13px 0px 0px;
+        width: 14px;
+        height: 14px; 
+    }
+    .header__enter {
+        color: #969696;
+    }
+    .header__login-slash {
+        margin: 0 3px;
+    }
+    .header__registrastion {
+        color: #969696;
+    }
+    //------------------------БЛОК hader-----------------------------------
+    //------------------------БЛОК menu-----------------------------------
+    .menu {
+        background-color: #0F0F0F;
+    }
+    .menu__row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+        
+        .menu__logo-box {  
+            margin: 15px 469px 11px 405px;//-----------Почему шрифт не ровный
+    }
+        .menu__logo-text {
+        font-family: 'Post No Bills Jaffna';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        line-height: 54px;
+    }
+    .menu__btn-like {
+        font-family: PT Sans;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #969696;
+        text-align: center;
+        padding: 31px 20px;
+        &:hover{
+            color: #FFFFFF;
+            background-color: #1F1F1F;}
+    }
+    .menu__btn-lc {
+        font-family: PT Sans;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #969696;
+        text-align: center;
+        padding: 31px 20px;
+        &:hover{
+            color: #FFFFFF;
+            background-color: #1F1F1F;}
+        }
+    .menu__btn-settings {
+        font-family: PT Sans;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #969696;
+        text-align: center;
+        padding: 31px 20px;
+        &:hover{
+            color: #FFFFFF;
+            background-color: #1F1F1F;}
+        }
+    .menu__basket {
+        color: #FFFFFF;
+        padding: 29px 20px;
+        &:hover{
+            color: #FFFFFF;
+            background-color: #1F1F1F;}
+        }
+    .menu__search {
+        color: #FFFFFF;
+        padding: 31px 20px;
+        &:hover{
+            color: #FFFFFF;
+            background-color: #1F1F1F;}
+        }
+    //------------------------БЛОК menu-----------------------------------
+    //------------------------БЛОК title-----------------------------------
+    .title {
+        background: url(../img/title.jpg) 0 -230px / 1920px  no-repeat;       
+    } //------------------ хуй пойми как размер картинки в блоке задавать??
+    .title_colomn {
+        width: 1920px;
+        height: 810px;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        color: #FFFFFF;
+    }
+    .title__logo-box {
+        margin-top: 160px;
+        border: 4px solid #FFFFFF;
+        width: 320px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        //---- при уменьшении в браузере едет нахуй относительно картинки..
+        // ---- а при увеличении держится..
+    }
+    .title__name {
+        font-family: Post No Bills Jaffna;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 96px;
+        text-transform: uppercase;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 180px;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background-color: #FFFFFF;
+            margin: 0px 0px 10px 2px;} //выровнял методом тыка, понимания нет
+    }
+    .title__from {
+        font-family: PT Sans;
+        font-size: 22px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .title__subtitle {
+        width: 730px;
+        text-align: center;
+        margin-top: 80px;
+    }
+    .title__text {
+        font-family: PT Sans;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    //------------------------БЛОК title-----------------------------------
+    //------------------------БЛОК new-collection-------------------------
+    .new-collection {
+        background-color: #000000;
+        height: 730px;
+    }
+    .new-collection__row {
+        display: flex;
+    }
+    .new-collection__product {
+        width: 1040px;
+        height: 730px;
+        text-align: center;
+    }
+    .new-collection__title {
+        margin-top: 93px;
+        font-family: Playfair Display;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-weight: 700;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 120px;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 0px 0px -50px 465px;}//-- цифры писал пока не получилось??
+    }
+    .new-collection__items {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .new-collection__item {
+        margin: 0px 25px;
+        width: 260px;
+        height: 405px;
+    }
+    .new-collection__pic {
+        width: 260px;
+        height: 325px;
+        background: #191B1C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .new-collection__desc {
+        font-family: Playfair Display;
+        display: flex;
+        flex-direction: column;
+    }
+    .new-collection__name {
+        margin-top: 25px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        align-self: flex-start;
+    }
+    .new-collection__price {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #D0D0D0;
+        align-self: flex-start;
+    }
+    .new-collection__catalog {
+        width: 880px;
+        height: 730px;
+        background: url(../img/men.jpg) -110px 0 / auto 100% no-repeat; 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .second-title{
+        margin-top: 484px;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 120px;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 0px 0px -26px 125px;}//---таже хуйня  
+    }
+    .new-collection__btn {
+        font-family: PT Sans;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        padding: 12px 28px;
+        margin-top: 60px;
+    }
+    //------------------------БЛОК new-collection---------------------------
+     //------------------------БЛОК old-collection---------------------------
+     .old-collection__row {
+         display: flex;
+         flex-direction: row;
+    }
+    .old-collection__logo {
+        width: 880px;
+        height: 600px;
+        background: url(../img/Rect.jpg) 0 0 / auto 100% no-repeat;  
+    }
+    .old-collection__text {
+        width: 1040px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #000000;
+    }
+    .old-collection__title {
+        margin-top: 100px;
+        font-family: Playfair Display;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 120px;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 0px 0px -40px 95px;}//----------------------------
+    }
+    .old-collection__desc {
+        margin-top: 80px;
+        width: 471px;
+        font-family: PT Sans;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .old-collection__btn {
+        font-family: PT Sans;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        padding: 12px 28px;
+        margin-top: 61px;
+    }
+     //------------------------БЛОК old-collection---------------------------
+    //------------------------БЛОК new-product---------------------------
+     .new-product {
+        background: #000000;
+        padding: 120px 0 0 0;
+        height: 1290px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .new-product__title {
+        font-family: Playfair Display;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-weight: 700;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 120px;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 0px 0px -40px 530px;}
+    }
+    .new-product__items {
+        margin-top: 121px;
+        display: flex;
+        justify-content: center;
+        width: 1180px;
+        flex-wrap: wrap;
+    }
+    .new-product__item{
+        margin: 0px 11px 40px 11px;
+        width: 260px;
+        height: 405px;
+    }
+//------------------------БЛОК new-product---------------------------
+//------------------------БЛОК brands---------------------------
+.brands {
+    height: 362px;
+    background: #0F0F0F;
+    padding-top: 60px;
+    text-align: center;
+}
+.brands__title {
+    font-family: Playfair Display;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: 700;
+    position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 120px;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 0px 0px -40px 900px;}//-----???
+
+}
+.brands__logo-row {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+.brands__logo {
+    margin: 0px 15px;
+    color: #FFFFFF;
+}
+//------------------------БЛОК brands---------------------------
+//------------------------БЛОК aside---------------------------
+.aside {
+    height: 400px;
+    background: url(../img/aside.jpg) center / 100% auto no-repeat;
+}
+.aside__background{
+    background-color: rgba(15, 15, 15, 0.85);
+    //здесь наЁбся, потому что полупрозрачная картинка на белом фоне
+    //не так выглядела как в макете, нужен чёрный фон   
+    // но opacity весь текст полупрозрачным делает
+    // правильно тут??
+}
+.aside__row {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+.aside__info {
+    width: 350px;
+    margin: 0 15px;
+}
+.aside__info-title {
+    font-family: Playfair Display;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+.aside__info-text {
+    margin-top: 40px;
+    font-family: PT Sans;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+.aside__category {
+    width: 300px;
+    margin: 0 0 0 15px;
+}
+.aside__category-title { // понял шо можно все titl`ы одним класом описать
+    font-family: Playfair Display;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+.aside__category-columns {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.aside__category-items {
+    display: flex;
+}
+.aside__category-item {
+    padding: 10px 20px;
+    margin: 0 20px 20px 0;
+    font-family: PT Sans;
+    font-size: 14px;
+    line-height: 21px;
+    color: #D0D0D0;
+    background: #0F0F0F;
+}
+.aside__mail {
+    width: 350px;
+    margin: 0 0 0 79px;
+}
+.aside__mail-title {
+    font-family: Playfair Display;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+.aside__mail-info { //-- и это тоже одним классом..
+    margin-top: 40px;
+    font-family: PT Sans;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+.aside__mail-box-form {
+    margin-top: 37px;
+    display: flex;
+}
+.aside__mail-form {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    font-family: PT Sans;
+    font-size: 14px;
+    line-height: 21px;
+    color: #D0D0D0; 
+}
+.aside__mail-btn {
+    font-family: PT Sans;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    background: #0F0F0F;
+}
+//------------------------БЛОК aside---------------------------
+//------------------------footer---------------------------
+.footer__box {
+    height: 50px;
+    background: #0F0F0F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__right {
+    font-family: PT Sans;
+    font-size: 12px;
+    line-height: 16px;
+    color: #D0D0D0;
+}
+.footer__made-in {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #D0D0D0;
+}
